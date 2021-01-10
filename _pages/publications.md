@@ -7,6 +7,7 @@ years: [2020]
 nav: true
 ---
 
+{% raw %}
 <div class="publications">
 
 {% for y in page.years %}
@@ -15,3 +16,4 @@ nav: true
 {% endfor %}
 
 </div>
+{% endraw %}
