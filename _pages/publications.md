@@ -6,13 +6,13 @@ description: publications by categories in reversed chronological order.
 years: [2020]
 nav: true
 ---
-
+render_with_liquid: false
 
 <div class="publications">
 
 {% for y in page.years %}
   <h2 class="year">{{y}}</h2>
-  {% bib -f papers -q @*[year={{y}}]* %}
+  {% bibliography -f papers -q @*[year={{y}}]* %}
 {% endfor %}
 
 </div>
