@@ -5,7 +5,6 @@ title: publications
 description: publications by categories in reversed chronological order.
 years: [2020]
 nav: true
-render_with_liquid: false
 ---
 
 
