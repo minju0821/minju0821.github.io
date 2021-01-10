@@ -73,7 +73,7 @@ pagination:
   enabled: true
 
 # Comments
-disqus_shortname:  # put your disqus shortname
+disqus_shortname: minju # put your disqus shortname
 
 # -----------------------------------------------------------------------------
 # Collections
