@@ -7,13 +7,12 @@ years: [2020]
 nav: true
 ---
 
-{% raw %}
+
 <div class="publications">
 
 {% for y in page.years %}
   <h2 class="year">{{y}}</h2>
-  {% bibliography -f papers -q @*[year={{y}}]* %}
+  {% {% raw %}bibliography{% endraw %} -f papers -q @*[year={{y}}]* %}
 {% endfor %}
 
 </div>
-{% endraw %}
