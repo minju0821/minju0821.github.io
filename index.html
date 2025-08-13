@@ -24,7 +24,6 @@
 
 // Create a set of parallel arrays for each of the scales
 var participant = '';
-var session = '';
 var scale      = new Array();
 var left       = new Array();
 var right      = new Array();
@@ -191,9 +190,8 @@ function onLoad()
 function buttonPart1()
 {
 	participant = document.getElementById('demographic_form').children[0].value;
-	session = document.getElementById('demographic_form').children[1].value;
-	if(participant === '' || session === ''){
-		alert('Invalide participant or session');
+	if(participant === ''){
+		alert('Invalid participant');
 		return false;
 	}
 
@@ -287,7 +285,7 @@ function getResultsHTML()
 	};
 
 	var blob = new Blob([JSON.stringify(data)], {type: "text/plain;charset=utf-8"});
-	saveAs(blob, 'result_'+participant+'_'+session+'.json');
+	saveAs(blob, 'result_'+participant+'.json');
 
 	return "Thank you for your answers.";
 
@@ -435,8 +433,6 @@ input.pair
 	<form id="demographic_form">
 		Participant:
 		<input type="text" name="participant">
-		Session:
-		<input type="text" name="session">
 	</form>
 
   Click on each scale at the point that best indicates your experience of the task <br>
